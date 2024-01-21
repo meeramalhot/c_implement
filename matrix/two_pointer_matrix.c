@@ -3,7 +3,7 @@
 
 /* program that utilizes two pointers to create an 2D array */
 
-void matrix(rows, cols) {
+int matrix(rows, cols) {
   int **matrix;
   //allocating memory for rows of the matrix
   matrix = (int**)malloc((sizeof(int*) * rows));
@@ -34,6 +34,8 @@ void matrix(rows, cols) {
     }
     //free memory used for rows
     free(matrix);
+
+  return(0);
 }
 
 
