@@ -3,6 +3,7 @@
 
 /* program that utilizes two pointers to create an 2D array */
 
+
 int matrix(rows, cols) {
   int **matrix;
   //allocating memory for rows of the matrix
@@ -54,4 +55,5 @@ int main() {
 
   matrix(rows, cols);
 
+  return(0);
 }
