@@ -5,8 +5,14 @@
 
 void matrix(rows, cols) {
   int **matrix;
-  //allocating memory for the matrix
+  //allocating memory for rows of the matrix
   matrix = (int**)malloc(rows * (sizeof(int*)));
+  //allocating memory for columns of the matrix
+  for (int i = 0; i<rows; i++){
+    matrix[i] = matrix[i] = (int *)malloc(cols * sizeof(int));
+  }
+
+  
 
 }
 
