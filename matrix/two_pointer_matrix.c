@@ -12,7 +12,9 @@ void matrix(rows, cols) {
     matrix[i] = matrix[i] = (int *)malloc(cols * sizeof(int));
   }
 
-  
+  //fill the matrix with random values 
+
+
 
 }
 
