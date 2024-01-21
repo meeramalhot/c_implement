@@ -3,7 +3,7 @@
 
 /* program that utilizes two pointers to create an 2D array */
 
-int main(void) {
+int main() {
   //asking user for how many rows and cols and storing them
   int rows, cols = 0;
   printf("enter amount of rows: ");
