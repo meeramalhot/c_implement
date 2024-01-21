@@ -4,7 +4,7 @@
 /* program that utilizes two pointers to create an 2D array */
 
 
-int matrix(rows, cols) {
+int print_matrix(rows, cols) {
   int **matrix;
   //allocating memory for rows of the matrix
   matrix = (int**)malloc((sizeof(int*) * rows));
@@ -53,7 +53,7 @@ int main() {
 
   printf("\n");
 
-  matrix(rows, cols);
+  print_matrix(rows, cols);
 
   return(0);
 }
