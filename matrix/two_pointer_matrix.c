@@ -22,25 +22,26 @@ int print_matrix(rows, cols) {
   }
 
   //print matrix
-      for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            printf("%d ", matrix[i][j]);
-        }
-        printf("\n");
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+      printf("%d ", matrix[i][j]);
     }
+       printf("\n");
+  }
   
   //free memory used for cols
-    for (int i = 0; i<rows; i++) {
+  for (int i = 0; i<rows; i++) {
       free(matrix[i]);
-    }
-    //free memory used for rows
-    free(matrix);
+  }
+  //free memory used for rows
+  free(matrix);
 
   return(0);
 }
 
 
-int main() {
+
+int main(void) {
   //asking user for how many rows and cols and storing them
   int rows, cols = 0;
   printf("enter amount of rows: ");
