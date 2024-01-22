@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 //creating and displaying a linked list
-
 typedef struct node{
   int data;
   struct node * next;
@@ -20,8 +19,12 @@ int main() {
   node * HEAD = NULL;
   printf("\nHow many nodes in the list?\t");
   scanf("%d", &number);
+  
   HEAD = createLinkedList(number);
   displayList(HEAD);
+
+  int SUM = sumlist(HEAD);
+  printf("And the sum of the list is: %d", SUM);
 
 }
 
@@ -60,6 +63,7 @@ node * createLinkedList(int n){
   return head;
 }
 
+
 void displayList(node * head) {
   node * point = head;
   //prints everything but last node w arrow
@@ -69,3 +73,15 @@ void displayList(node * head) {
   }
   printf("\t%d", point->data);
 }
+
+int sumList(node * head) {
+  int sum = 0;
+  node * point = head;
+  while(point){
+    sum += point->data;
+    point = point->next;
+  }
+return sum;
+}
+
+//add code to free
