@@ -12,7 +12,7 @@ node * createLinkedList(int n);
 //function to display list
 void displayList(node * head);
 //function to sum up list
-int sumList(node * head);
+void displaySum(node * head);
 
 int main() {
   int number = 0;
@@ -22,10 +22,7 @@ int main() {
   
   HEAD = createLinkedList(number);
   displayList(HEAD);
-
-  int SUM = sumlist(HEAD);
-  printf("And the sum of the list is: %d", SUM);
-
+  displaySum(HEAD);
 }
 
 node * createLinkedList(int n){
@@ -72,16 +69,22 @@ void displayList(node * head) {
     point = point->next;
   }
   printf("\t%d", point->data);
+  printf("\n");
 }
 
-int sumList(node * head) {
+void displaySum(node * head) {
   int sum = 0;
+  float avg = 0;
+  int count = 0;
   node * point = head;
   while(point){
     sum += point->data;
+    count++;
     point = point->next;
   }
-return sum;
+  avg = sum/count;
+  printf("The sum of the nodes are %d\n", sum);
+  printf("The average of the nodes are %.2f\n", avg);
 }
 
 //add code to free
