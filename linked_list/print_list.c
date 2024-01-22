@@ -13,16 +13,21 @@ node * createLinkedList(int n);
 void displayList(node * head);
 //function to sum up list
 void displaySum(node * head);
+//function to free memory used
+void freeHead(node * head);
 
 int main() {
   int number = 0;
   node * HEAD = NULL;
   printf("\nHow many nodes in the list?\t");
   scanf("%d", &number);
-  
+  printf("\n");
+
   HEAD = createLinkedList(number);
   displayList(HEAD);
+  printf("\n");
   displaySum(HEAD);
+  freeHead(HEAD);
 }
 
 node * createLinkedList(int n){
@@ -85,6 +90,17 @@ void displaySum(node * head) {
   avg = sum/count;
   printf("The sum of the nodes are %d\n", sum);
   printf("The average of the nodes are %.2f\n", avg);
+  printf("\n");
 }
 
-//add code to free
+//function to free memory
+void freeHead(node * head){
+    node *prev = head;
+    node *cur = head;
+    while(cur) {
+        prev = cur;
+        cur = prev->next;
+        free(prev);
+    }
+}
+
