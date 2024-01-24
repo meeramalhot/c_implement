@@ -1,17 +1,18 @@
 typedef struct dict *Dict;
 
-//create a new empty dictionary
-Dict makeDictionary(void);
+/* create a new empty dictionary */
+Dict makeDict(void);
 
-// delete an entire dictionary
-void deleteDictionary(Dict);
+/* destroy a dictionary */
+void destroyDict(Dict);
 
-// insert a new key-value pair into an existing dictionary
-void insertDictionary(Dict, const char *key, const char *value);
+/* insert a new key-value pair into an existing dictionary */
+void insertDict(Dict, const char *key, const char *value);
 
-//return the most recently inserted value associated with a key and 0 if no key
-const char *searchDictionary(Dict, const char *key);
+/* return the most recently inserted value associated with a key */
+/* or 0 if no matching key is present */
+const char *DictSearch(Dict, const char *key);
 
-//delete the most recently inserted record with the given key
-//if there is no such record, has no effect
-void (Dict, const char *key);
+/* delete the most recently inserted record with the given key */
+/* if there is no such record, has no effect */
+void DictDelete(Dict, const char *key);

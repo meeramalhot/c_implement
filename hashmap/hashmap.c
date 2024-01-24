@@ -1,5 +1,5 @@
-#include <assert.h>
 #include <stdlib.h>
+#include <assert.h>
 #include <string.h>
 
 #include "hashmap.h"
@@ -14,7 +14,7 @@ typedef struct node {
     char *value;
 } node;
 
-struct dict {
+typedef struct dict {
     int size;           /* size of the pointer table */
     int n;              /* number of elements stored */
     struct node **table;
