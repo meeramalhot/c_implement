@@ -1,6 +1,7 @@
 typedef struct dict *Dict;
 
 /* create a new empty dictionary */
+Dict initalizer(int size);
 Dict makeDict(void);
 
 /* destroy a dictionary */
