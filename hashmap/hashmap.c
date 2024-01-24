@@ -8,11 +8,11 @@
 #define GROWTH_FACTOR (2)
 #define MAX_LOAD_FACTOR (1)
 
-typedef struct node {
+struct node {
     struct node *next;
     char *key;
     char *value;
-} node;
+};
 
 struct dict {
     int size;           /* size of the pointer table */
@@ -21,10 +21,12 @@ struct dict {
 };
 
 Dict initalizer(int size) {
-  Dict d;
+  Dict words;
   int i= 0;
 
-  assert(d!= 0);
+  words = malloc(sizeof(*words));
+
+  assert(words!= 0);
 
 }
 
