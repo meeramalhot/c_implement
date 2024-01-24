@@ -14,9 +14,22 @@ typedef struct node {
     char *value;
 } node;
 
-typedef struct dict {
+struct dict {
     int size;           /* size of the pointer table */
     int n;              /* number of elements stored */
     struct node **table;
-} Dict;
+};
 
+Dict initalizer(int size) {
+  Dict d;
+  int i= 0;
+
+  assert(d!= 0);
+
+}
+
+Dict makeDict(void){
+  return initializer(INITIAL_SIZE);
+}
+
+Dict makeDict(void);
