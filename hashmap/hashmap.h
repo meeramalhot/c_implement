@@ -4,8 +4,8 @@ typedef struct dict *Dict;
 Dict initalizer(int size);
 Dict makeDict(void);
 
-/* destroy a dictionary */
-void destroyDict(Dict);
+/* free memory dictionary uses*/
+void freeDict(Dict);
 
 /* insert a new key-value pair into an existing dictionary */
 void insertDict(Dict, const char *key, const char *value);
