@@ -9,14 +9,14 @@
 #define MAX_LOAD_FACTOR (1)
 
 struct node {
-    struct node *next;
-    char *key;
-    char *value;
+  struct node *next;
+  char *key;
+  char *value;
 };
 
 struct dict {
     int size;           /* size of the pointer table */
-    int n;              /* number of elements stored */
+    int elements;              /* number of elements stored */
     struct node **table;
 };
 
@@ -25,9 +25,21 @@ Dict initalizer(int size) {
   int i= 0;
 
   words = malloc(sizeof(*words));
-
+  //check if null
   assert(words!= 0);
 
+    //(*a).b = ->
+    words->size = size;
+    words->elements = 0;
+    words->table = malloc(sizeof(struct node *) * words->size);
+
+    assert(words->table != 0);
+
+    for(i = 0; i < words->size; i++) {
+      words->table[i] = 0;
+    }
+
+    return d;
 }
 
 Dict makeDict(void){
