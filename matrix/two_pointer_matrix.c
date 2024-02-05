@@ -25,7 +25,7 @@ int main() {
   //fill the matrix with random values 
   for (int i = 0; i<rows; i++){
     for (int j = 0; j<cols; j++){
-      int value = rand();
+      int value = rand() % 10;
       matrix[i][j] = value;
     }
   }
