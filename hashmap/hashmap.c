@@ -39,7 +39,7 @@ Dict initalizer(int size) {
       words->table[i] = 0;
     }
 
-    return d;
+    return words;
 }
 
 Dict makeDict(void){
