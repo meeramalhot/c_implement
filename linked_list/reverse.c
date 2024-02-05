@@ -10,19 +10,25 @@ struct Node {
 //reverse function
 static void reverse(struct Node** head_ref) {
   //reverse pointers, while keeping nodes in place
-  struct Node *prev = NULL, *cur=head_ref, *tmp;
+    struct Node* prev = NULL;
+    struct Node* current = *head_ref;
+    struct Node* next = NULL;
+
     //while current is not null
-    while(cur){
-      //find the value of next and store it
-      tmp = cur->next;
-      // shift pointer backwards
-      cur->next = prev;
-      //move forward to reverse the next nodes
-      prev = cur;
-      cur = tmp;
+    while (current) {
+        //save the value of next
+        next = current->next;
+ 
+        //move the pointer to point to the previous, rather than the next
+        current->next = prev;
+ 
+        // move to the next node to reverse
+        prev = current;
+        current = next;
     }
-   *head_ref = prev;
+    *head_ref = prev;
 }
+
 
 //function to push a node
 void push(struct Node** head_ref, int new_data)
